@@ -22,25 +22,25 @@ export default function Login() {
             </div>
           </div>
         </div>
-        <div className="relative z-10 shadow-lg bg-white my-3 p-3 w-[50%] rounded-xl flex items-center">
-          <FaUser className="h-8 mr-1 text-gray-300" />
+        <div className="relative z-10 shadow-lg bg-white my-3 p-2 w-[50%] rounded-xl flex items-center">
+          <FaUser className="h-8 ml-2 mr-1 text-gray-300" />
           <input
             type="text"
             placeholder="Enter your email or username"
             className="pl-3 outline-none text-sm"
           />
         </div>
-        <div className="relative z-10 shadow-lg bg-white my-3 p-3 w-[50%] rounded-xl flex items-center">
-          <FaLock className="h-6 mr-1 text-gray-300" />
+        <div className="relative z-10 shadow-lg bg-white my-3 p-2 w-[50%] rounded-xl flex items-center">
+          <FaLock className="h-6 ml-2 mr-1 text-gray-300" />
           <input
             type="password"
             placeholder="Enter your password"
             className="pl-3 outline-none text-sm"
           />
           {isOpen ? (
-            <FaEye className="h-8 mr-1 text-gray-400" />
+            <FaEye className="h-8 mr-1 text-gray-400 hover:text-gray-500" />
           ) : (
-            <FaEyeSlash className="h-8 mr-1 text-gray-400" />
+            <FaEyeSlash className="h-8 mr-1 text-gray-400 hover:text-gray-500" />
           )}
         </div>
         <div className="relative z-10 flex my-4 ml-5 w-1/2">
