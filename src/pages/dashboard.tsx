@@ -4,7 +4,7 @@ import React from "react";
 
 export default function dashboard() {
   return (
-    <div className="w-full bg-[#f0f5f7] h-screen flex items-start">
+    <div className="w-full bg-[#f0f5f7] h-screen flex items-center justify-between">
       <SideBar />
       <MainContent />
     </div>

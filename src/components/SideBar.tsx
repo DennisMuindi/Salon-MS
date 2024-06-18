@@ -11,7 +11,7 @@ import {
 
 export default function SideBar() {
   return (
-    <div className="w-[15%] h-screen bg-white m-0">
+    <div className="fixed left-0 top-0 h-screen bg-[#F7F7F7] shadow-2xl w-[15%] overflow-y-auto">
       <div className="mt-14">
         <Header />
         <ul className="ml-12 mt-14 flex items-start gap-6 justify-evenly flex-col">
