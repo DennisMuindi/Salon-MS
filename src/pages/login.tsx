@@ -1,6 +1,13 @@
-import { FaLock, FaEye, FaEyeSlash, FaUser } from "react-icons/fa";
+import { useRouter } from "next/router";
+import { FaEye, FaEyeSlash, FaEnvelope } from "react-icons/fa";
+import { FaUnlockKeyhole } from "react-icons/fa6";
+
 export default function Login() {
   const isOpen = true;
+  const router = useRouter();
+  const handleSubmit = () => {
+    router.push("/dashboard");
+  };
   return (
     <>
       <div className="relative w-1/2 flex flex-col items-center justify-center bg-[#f0f5f7]">
@@ -10,7 +17,7 @@ export default function Login() {
             <img src="/powder.png" alt="" className="h-10 mr-2" />
             <div>
               <div className="flex items-center">
-                <h1 className="text-[2.5rem] font-medium">Glamour</h1>
+                <h1 className="text-[2rem] font-medium glamour">Glamour</h1>
               </div>
               <div className="flex items-start justify-center">
                 <p className="font-medium text-sm">Beauty</p>
@@ -23,7 +30,7 @@ export default function Login() {
           </div>
         </div>
         <div className="relative z-10 shadow-lg bg-white my-3 p-2 w-[50%] rounded-xl flex items-center">
-          <FaUser className="h-8 ml-2 mr-1 text-gray-300" />
+          <FaEnvelope className="h-8 ml-2 mr-1 text-gray-300" />
           <input
             type="text"
             placeholder="Enter your email or username"
@@ -31,7 +38,7 @@ export default function Login() {
           />
         </div>
         <div className="relative z-10 shadow-lg bg-white my-3 p-2 w-[50%] rounded-xl flex items-center">
-          <FaLock className="h-6 ml-2 mr-1 text-gray-300" />
+          <FaUnlockKeyhole className="h-6 ml-2 mr-1 text-gray-300" />
           <input
             type="password"
             placeholder="Enter your password"
@@ -47,7 +54,10 @@ export default function Login() {
           <input type="checkbox" className="mr-6" />
           <p className="font-medium text-gray-800">Remember Me</p>
         </div>
-        <button className="relative z-10 w-1/2 my-5 py-2 rounded-lg bg-[#E83E8C] hover:bg-[#f565a8] hover:delay-150 border-none text-white font-medium text-lg text-center">
+        <button
+          className="relative z-10 w-1/2 my-5 py-2 rounded-lg bg-[#E83E8C] hover:bg-[#f565a8] hover:delay-150 border-none text-white font-medium text-lg text-center "
+          onClick={handleSubmit}
+        >
           Sign In
         </button>
         <div className="relative z-10 flex gap-4 my-2 ml-5 w-1/2">
