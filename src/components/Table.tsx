@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Table() {
   return (
-    <div className="ml-24 my-5 w-[70%]">
+    <div className="ml-24 my-5 w-full">
       <div className="flex flex-col w-full  inset-0 bg-[url(/bg-image.png)] bg-cover bg-center bg-no-repeat">
         {/* Table Header */}
         <div className="flex w-[87%] ">
