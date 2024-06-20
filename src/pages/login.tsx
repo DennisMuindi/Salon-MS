@@ -11,7 +11,7 @@ export default function Login() {
   return (
     <>
       <div className="relative w-1/2 flex flex-col items-center justify-center bg-[#f0f5f7]">
-        <div className="absolute inset-0 bg-[url('/powder.png')] bg-no-repeat bg-center blur-md"></div>
+        <div className="absolute inset-0 bg-[url('/bg-image.png')] bg-no-repeat bg-center bg-contain"></div>
         <div className="relative z-10 mt-2">
           <div className="flex items-center">
             <img src="/powder.png" alt="" className="h-10 mr-2" />
