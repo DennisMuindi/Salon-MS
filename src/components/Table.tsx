@@ -3,10 +3,12 @@ import React from "react";
 export default function Table() {
   return (
     <div className="ml-24 my-5 w-full">
-      <div className="flex flex-col w-full  inset-0 bg-[url(/bg-image.png)] bg-cover bg-center bg-no-repeat">
+      <div className="flex flex-col w-full  inset-0 bg-[url(/bg-image.png)] bg-contain bg-center bg-no-repeat">
         {/* Table Header */}
         <div className="flex w-[87%] ">
-          <div className="flex-1 p-2"></div>
+          <div className="flex-1 p-2 text-[#B1B1B1] text-sm font-semibold text-left">
+            Name
+          </div>
           <div className="flex-1 p-2 text-[#B1B1B1] text-sm font-semibold text-left">
             Service
           </div>
@@ -102,7 +104,7 @@ export default function Table() {
               {row.time}
             </div>
             <div
-              className={`flex-1 p-2 ${row.textColor} font-semibold text-sm text-center text-[#f7f7f7] ${row.statusColor} rounded-full`}
+              className={`flex-1 mr-5 p-2 ${row.textColor} font-semibold text-sm text-center ${row.statusColor} rounded-full`}
             >
               {row.status}
             </div>
