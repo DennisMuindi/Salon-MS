@@ -5,23 +5,34 @@ import Table from "./Table";
 
 export default function MainContent() {
   return (
-    <div className="ml-[15%] w-[85%] bg-[#f0f5f7] h-screen overflow-y-auto">
-      <div className="flex justify-end mr-20 mt-5 sticky top-5 z-10">
-        <div className="flex items-center gap-3 ">
-          <img src="/notification.png" alt="" className="h-7" />
-          <div className="flex items-center">
+    <div
+      className="ml-[15%] w-[85%] bg-[#f0f5f7] h-screen overflow-x-hidden"
+      style={{ scrollBehavior: "smooth" }}
+    >
+      <div className="flex justify-end mr-24 mt-5 ">
+        <div className="flex items-center gap-3 bg-[#673bb7] shadow-custom-xl px-2 py-3 rounded-xl">
+          <img
+            src="/notification.png"
+            alt=""
+            className="h-7 bg-[#f7f7f7] rounded-full"
+          />
+          <div className="flex items-center ">
             <img
               src="/avatar.png"
               alt=""
-              className="h-10 w-10 rounded-full border-2 border-[#673BB7]"
+              className="h-10  w-10  border-2 border-[#673BB7]"
             />
-            <p className="font-medium text-xs mr-5 ml-2">Linda S</p>
+            <p className="font-medium text-xs mr-5 ml-2 text-white">Linda S</p>
           </div>
-          <img src="/Arrow.png" alt="" className="h-5" />
+          <img
+            src="/Arrow.png"
+            alt=""
+            className="h-5 bg-[#f7f7f7] rounded-full"
+          />
         </div>
       </div>
       {/* Confirmed pending and cancelled divs */}
-      <div className="ml-10 mt-10 flex items-center justify-around w-[70%]">
+      <div className="ml-10 mt-10 flex items-center justify-around w-[86%]">
         <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[20%] relative py-3 shadow-custom-xl">
           <div className="absolute -left-4 z-0">
             <img src="/confirmed.png" alt="" className="h-12 " />
