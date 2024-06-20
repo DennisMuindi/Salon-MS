@@ -9,26 +9,23 @@ export default function MainContent() {
       className="ml-[15%] w-[85%] bg-[#f0f5f7] h-screen overflow-x-hidden"
       style={{ scrollBehavior: "smooth" }}
     >
-      <div className="flex justify-end mr-24 mt-5 ">
-        <div className="flex items-center gap-3 bg-[#673bb7] shadow-custom-xl px-2 py-3 rounded-xl">
+      <div className="flex items-center justify-between mx-20 mt-3 ">
+        <h2 className="text-gray-600 font-medium">Dashboard</h2>
+        <div className="flex items-center gap-3 py-3 ">
           <img
             src="/notification.png"
             alt=""
-            className="h-7 bg-[#f7f7f7] rounded-full"
+            className="h-7 bg-[#f7f7f7] rounded-full mr-5"
           />
           <div className="flex items-center ">
             <img
               src="/avatar.png"
               alt=""
-              className="h-10  w-10  border-2 border-[#673BB7]"
+              className="h-10  w-10  border-2 border-[#673BB7] rounded-full"
             />
-            <p className="font-medium text-xs mr-5 ml-2 text-white">Linda S</p>
+            <p className="font-medium text-xs mr-5 ml-2 ">Linda S</p>
           </div>
-          <img
-            src="/Arrow.png"
-            alt=""
-            className="h-5 bg-[#f7f7f7] rounded-full"
-          />
+          <img src="/Arrow.png" alt="" className="h-5  rounded-full" />
         </div>
       </div>
       {/* Confirmed pending and cancelled divs */}
