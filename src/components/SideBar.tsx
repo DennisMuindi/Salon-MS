@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "./Header";
-import { FaUserCog } from "react-icons/fa";
 import {
   FaCalendarDays,
   FaClockRotateLeft,
@@ -8,75 +7,145 @@ import {
   FaPeopleGroup,
   FaPeopleLine,
 } from "react-icons/fa6";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { FaUsersCog } from "react-icons/fa";
 
 export default function SideBar() {
+  const router = useRouter();
+
+  const isActive = (path: any) => router.pathname === path;
+
   return (
     <div className="fixed left-0 top-0 h-screen bg-[#F7F7F7] shadow-2xl w-[15%] overflow-y-auto">
       <div className="mt-14">
         <Header />
         <ul className="ml-12 mt-14 flex items-start gap-6 justify-evenly flex-col">
-          <div className="flex items-center gap-6 hover:border-l-2 border-[#673BB7] pl-2">
-            <FaHouse className="h-8 text-[#673BB7]" />
+          <div
+            className={`flex items-center gap-6 pl-2 ${
+              isActive("/dashboard") ? "text-[#673BB7]" : "text-gray-600"
+            }`}
+          >
+            <FaHouse
+              className={`h-8 ${
+                isActive("/dashboard") ? "text-[#673BB7]" : "text-gray-600"
+              }`}
+            />
             <li>
-              <a href="" className="text-xs font-medium text-[#673BB7] ">
+              <Link
+                href="/dashboard"
+                className={`text-xs font-medium ${
+                  isActive("/dashboard") ? "text-[#673BB7]" : "text-gray-600"
+                }`}
+              >
                 Dashboard
-              </a>
+              </Link>
             </li>
           </div>
-          <div className="flex items-center gap-6 hover:border-l-2 border-[#673BB7] pl-2">
-            <FaPeopleLine className="h-8 text-gray-400" />
+          <div
+            className={`flex items-center gap-6   pl-2 ${
+              isActive("/customer") ? " text-[#673BB7]" : ""
+            }`}
+          >
+            <FaPeopleLine
+              className={`h-8 ${
+                isActive("/customer") ? "text-[#673BB7]" : "text-gray-600"
+              }`}
+            />
             <li>
-              <a
-                href=""
-                className="text-xs  text-gray-600 font-medium hover:text-[#673BB7] "
+              <Link
+                href="/customer"
+                className={`text-xs font-medium ${
+                  isActive("/customer") ? "text-[#673BB7]" : "text-gray-600"
+                } hover:text-[#673BB7]`}
               >
                 Customers
-              </a>
+              </Link>
             </li>
           </div>
 
-          <div className="flex items-center gap-6 hover:border-l-2 border-[#673BB7] pl-2">
-            <FaPeopleGroup className="h-8 text-gray-400" />
+          <div
+            className={`flex items-center gap-6 pl-2 ${
+              isActive("/stylists") ? "text-[#673BB7]" : "text-gray-600"
+            }`}
+          >
+            <FaPeopleGroup
+              className={`h-8 ${
+                isActive("/stylists") ? "text-[#673BB7]" : "text-gray-600"
+              }`}
+            />
             <li>
-              <a
-                href=""
-                className="text-xs text-gray-600 font-medium hover:text-[#673BB7]"
+              <Link
+                href="/stylists"
+                className={`text-xs font-medium ${
+                  isActive("/stylists") ? "text-[#673BB7]" : "text-gray-600"
+                } hover:text-[#673BB7]`}
               >
                 Stylists
-              </a>
+              </Link>
             </li>
           </div>
-          <div className="flex items-center gap-6 hover:border-l-2 border-[#673BB7] pl-2">
-            <FaClockRotateLeft className="h-8 text-gray-400" />
+          <div
+            className={`flex items-center gap-6 pl-2 ${
+              isActive("/schedule") ? "text-[#673BB7]" : "text-gray-600"
+            }`}
+          >
+            <FaClockRotateLeft
+              className={`h-8 ${
+                isActive("/schedule") ? "text-[#673BB7]" : "text-gray-600"
+              }`}
+            />
             <li>
-              <a
-                href=""
-                className="text-xs text-gray-600 font-medium hover:text-[#673BB7]"
+              <Link
+                href="/schedule"
+                className={`text-xs font-medium ${
+                  isActive("/schedule") ? "text-[#673BB7]" : "text-gray-600"
+                } hover:text-[#673BB7]`}
               >
                 Schedule
-              </a>
+              </Link>
             </li>
           </div>
-          <div className="flex items-center gap-6 hover:border-l-2 border-[#673BB7] pl-2">
-            <FaCalendarDays className="h-8 text-gray-400" />
+          <div
+            className={`flex items-center gap-6 pl-2 ${
+              isActive("/reservations") ? "text-[#673BB7]" : "text-gray-600"
+            }`}
+          >
+            <FaCalendarDays
+              className={`h-8 ${
+                isActive("/reservations") ? "text-[#673BB7]" : "text-gray-600"
+              }`}
+            />
             <li>
-              <a
-                href=""
-                className="text-xs text-gray-600 font-medium hover:text-[#673BB7]"
+              <Link
+                href="/reservations"
+                className={`text-xs font-medium ${
+                  isActive("/reservations") ? "text-[#673BB7]" : "text-gray-600"
+                } hover:text-[#673BB7]`}
               >
                 Reservations
-              </a>
+              </Link>
             </li>
           </div>
-          <div className="flex items-center gap-6 hover:border-l-2 border-[#673BB7] pl-2">
-            <FaUserCog className="h-8 text-gray-400" />
+          <div
+            className={`flex items-center gap-6 pl-2 ${
+              isActive("/settings") ? "text-[#673BB7]" : "text-gray-600"
+            }`}
+          >
+            <FaUsersCog
+              className={`h-8 ${
+                isActive("/settings") ? "text-[#673BB7]" : "text-gray-600"
+              }`}
+            />
             <li>
-              <a
-                href=""
-                className="text-xs text-gray-600 font-medium hover:text-[#673BB7]"
+              <Link
+                href="/settings"
+                className={`text-xs font-medium ${
+                  isActive("/settings") ? "text-[#673BB7]" : "text-gray-600"
+                } hover:text-[#673BB7]`}
               >
                 Settings
-              </a>
+              </Link>
             </li>
           </div>
         </ul>
