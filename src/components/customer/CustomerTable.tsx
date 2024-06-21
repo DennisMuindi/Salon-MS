@@ -1,5 +1,5 @@
 import React from "react";
-import { FaUserPlus, FaEdit, FaTrash, FaPen } from "react-icons/fa";
+import { FaUserPlus, FaTrash } from "react-icons/fa";
 import { FaPenClip } from "react-icons/fa6";
 
 export default function Table() {
@@ -18,7 +18,7 @@ export default function Table() {
       </div>
 
       {/* Table headers */}
-      <div className="flex w-full mt-7">
+      <div className="flex w-full mt-7 sticky top-0 z-10">
         <div className="flex-1 p-2 text-[#B1B1B1] text-sm font-semibold text-left">
           Name
         </div>
@@ -37,78 +37,92 @@ export default function Table() {
       </div>
 
       {/* Table rows */}
-      {[
-        {
-          name: "Rhoda Mutuku",
-          telephone: "070000000",
-          gender: "Female",
-          location: "Machakos",
-        },
-        {
-          name: "John Doe",
-          telephone: "070000000",
-          gender: "Female",
-          location: "Machakos",
-        },
-        {
-          name: "Jane Smith",
-          telephone: "070000000",
-          gender: "Female",
-          location: "Machakos",
-        },
-        {
-          name: "Emma Johnson",
-          telephone: "070000000",
-          gender: "Female",
-          location: "Machakos",
-        },
-        {
-          name: "Chris Martin",
-          telephone: "070000000",
-          gender: "Female",
-          location: "Machakos",
-        },
-        {
-          name: "John Doe",
-          telephone: "070000000",
-          gender: "Female",
-          location: "Machakos",
-        },
-        {
-          name: "Emma Johnson",
-          telephone: "070000000",
-          gender: "Female",
-          location: "Machakos",
-        },
-      ].map((row, index) => (
-        <div
-          key={index}
-          className={`flex w-full ${
-            index % 2 === 0 ? "bg-transparent shadow-custom-xl" : ""
-          } my-2 py-2 rounded-xl`}
-        >
-          <div className="flex-1 p-2 text-[#454545] text-sm font-semibold text-left">
-            {row.name}
-          </div>
-          <div className="flex-1 p-2 text-[#454545] text-sm font-semibold text-left">
-            {row.telephone}
-          </div>
-          <div className="flex-1 p-2 text-[#454545] text-sm font-semibold text-left">
-            {row.gender}
-          </div>
-          <div className="flex-1 p-2 text-[#454545] text-sm font-semibold text-left">
-            {row.location}
-          </div>
-          <div className="flex-1 gap-5 p-2 text-[#454545] text-sm font-semibold text-left flex items-center ">
-            <div className=" rounded-full border border-gray-500 p-1">
-              <FaPenClip className="text-blue-500  cursor-pointer" />
+      <div className="max-h-[400px] overflow-y-scroll">
+        {[
+          {
+            name: "John Doe",
+            telephone: "070000000",
+            gender: "Female",
+            location: "Machakos",
+          },
+          {
+            name: "Jane Smith",
+            telephone: "070000000",
+            gender: "Female",
+            location: "Machakos",
+          },
+          {
+            name: "Emma Johnson",
+            telephone: "070000000",
+            gender: "Female",
+            location: "Machakos",
+          },
+          {
+            name: "Chris Martin",
+            telephone: "070000000",
+            gender: "Female",
+            location: "Machakos",
+          },
+          {
+            name: "Rhoda Mutuku",
+            telephone: "070000000",
+            gender: "Female",
+            location: "Machakos",
+          },
+          {
+            name: "John Doe",
+            telephone: "070000000",
+            gender: "Female",
+            location: "Machakos",
+          },
+          {
+            name: "Emma Johnson",
+            telephone: "070000000",
+            gender: "Female",
+            location: "Machakos",
+          },
+          {
+            name: "John Doe",
+            telephone: "070000000",
+            gender: "Female",
+            location: "Machakos",
+          },
+          {
+            name: "Jane Smith",
+            telephone: "070000000",
+            gender: "Female",
+            location: "Machakos",
+          },
+        ].map((row, index) => (
+          <div
+            key={index}
+            className={`flex w-full ${
+              index % 3 === 0 ? " shadow-custom-xl" : ""
+            } my-2 py-2 rounded-xl`}
+          >
+            <div className="flex-1 p-2 text-[#454545] text-sm font-semibold text-left">
+              {row.name}
             </div>
-            <div className=" rounded-full border border-gray-500 p-1">
-              <FaTrash className="text-red-500 cursor-pointer" />
+            <div className="flex-1 p-2 text-[#454545] text-sm font-semibold text-left">
+              {row.telephone}
+            </div>
+            <div className="flex-1 p-2 text-[#454545] text-sm font-semibold text-left">
+              {row.gender}
+            </div>
+            <div className="flex-1 p-2 text-[#454545] text-sm font-semibold text-left">
+              {row.location}
+            </div>
+            <div className="flex-1 gap-5 p-2 text-[#454545] text-sm font-semibold text-left flex items-center">
+              <div className="rounded-full border border-gray-500 p-1">
+                <FaPenClip className="text-blue-500 cursor-pointer" />
+              </div>
+              <div className="rounded-full border border-gray-500 p-1">
+                <FaTrash className="text-red-500 cursor-pointer" />
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

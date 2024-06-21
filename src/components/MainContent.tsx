@@ -29,8 +29,8 @@ export default function MainContent() {
         </div>
       </div>
       {/* Confirmed pending and cancelled divs */}
-      <div className="ml-10 mt-10 flex items-center justify-around w-[86%]">
-        <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[20%] relative py-3 shadow-custom-xl">
+      <div className="mx-20 mt-10 flex items-center justify-around w-[89%]">
+        <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[15%] relative py-3 shadow-custom-xl">
           <div className="absolute -left-4 z-0">
             <img src="/confirmed.png" alt="" className="h-12 " />
           </div>
@@ -42,7 +42,7 @@ export default function MainContent() {
           </div>
         </div>
 
-        <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[20%] relative py-3 shadow-custom-xl">
+        <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[15%] relative py-3 shadow-custom-xl">
           <div className="absolute -left-4 z-0">
             <img src="/pending.png" alt="" className="h-12 " />
           </div>
@@ -52,7 +52,7 @@ export default function MainContent() {
           </div>
         </div>
 
-        <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[20%] relative py-3 shadow-custom-xl">
+        <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[15%] relative py-3 shadow-custom-xl">
           <div className="absolute -left-4 z-0">
             <img src="/cancelled.png" alt="" className="h-12 " />
           </div>
@@ -60,6 +60,28 @@ export default function MainContent() {
             <span className="font-medium text-2xl">5</span>
             <h2 className=" text-[11px] text-[#783F3F] font-medium">
               Cancelled
+            </h2>
+          </div>
+        </div>
+        <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[15%] relative py-3 shadow-custom-xl">
+          <div className="absolute -left-4 z-0">
+            <img src="/avatar.png" alt="" className="h-10 " />
+          </div>
+          <div className="ml-10 flex items-center justify-between gap-4">
+            <span className="font-medium text-2xl">4</span>
+            <h2 className=" text-[11px] text-[#783F3F] font-medium">
+              Stylists
+            </h2>
+          </div>
+        </div>
+        <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[15%] relative py-3 shadow-custom-xl">
+          <div className="absolute -left-4 z-0">
+            <img src="/avatar.png" alt="" className="h-10 " />
+          </div>
+          <div className="ml-10 flex items-center justify-between gap-4">
+            <span className="font-medium text-2xl">20</span>
+            <h2 className=" text-[11px] text-[#783F3F] font-medium">
+              Customers
             </h2>
           </div>
         </div>
