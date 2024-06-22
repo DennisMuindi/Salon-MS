@@ -4,6 +4,7 @@ import {
   FaCalendarDays,
   FaClockRotateLeft,
   FaHouse,
+  FaMoneyBill1Wave,
   FaPeopleGroup,
   FaPeopleLine,
 } from "react-icons/fa6";
@@ -82,6 +83,27 @@ export default function SideBar() {
                 } hover:text-[#673BB7]`}
               >
                 Stylists
+              </Link>
+            </li>
+          </div>
+          <div
+            className={`flex items-center gap-6   pl-2 ${
+              isActive("/payment") ? " text-[#673BB7]" : ""
+            }`}
+          >
+            <FaMoneyBill1Wave
+              className={`h-8 ${
+                isActive("/payment") ? "text-[#673BB7]" : "text-gray-600"
+              }`}
+            />
+            <li>
+              <Link
+                href="/payment"
+                className={`text-xs font-medium ${
+                  isActive("/payment") ? "text-[#673BB7]" : "text-gray-600"
+                } hover:text-[#673BB7]`}
+              >
+                Payments
               </Link>
             </li>
           </div>

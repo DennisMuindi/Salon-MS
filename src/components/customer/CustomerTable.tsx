@@ -97,7 +97,7 @@ export default function Table() {
           <div
             key={index}
             className={`flex w-full ${
-              index % 3 === 0 ? " shadow-custom-xl" : ""
+              index % 3 === 0 ? " shadow-md" : ""
             } my-2 py-2 rounded-xl`}
           >
             <div className="flex-1 p-2 text-[#454545] text-sm font-semibold text-left">
