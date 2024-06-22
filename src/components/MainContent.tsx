@@ -30,7 +30,7 @@ export default function MainContent() {
       </div>
       {/* Confirmed pending and cancelled divs */}
       <div className="mx-20 mt-10 flex items-center justify-around w-[89%]">
-        <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[15%] relative py-3 shadow-custom-xl">
+        <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[15%] relative py-3 shadow-custom-xl hover:transform hover:scale-95 transition duration-300">
           <div className="absolute -left-4 z-0">
             <img src="/confirmed.png" alt="" className="h-12 " />
           </div>
@@ -42,7 +42,7 @@ export default function MainContent() {
           </div>
         </div>
 
-        <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[15%] relative py-3 shadow-custom-xl">
+        <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[15%] relative py-3 shadow-custom-xl hover:transform hover:scale-95 transition duration-300">
           <div className="absolute -left-4 z-0">
             <img src="/pending.png" alt="" className="h-12 " />
           </div>
@@ -52,7 +52,7 @@ export default function MainContent() {
           </div>
         </div>
 
-        <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[15%] relative py-3 shadow-custom-xl">
+        <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[15%] relative py-3 shadow-custom-xl hover:transform hover:scale-95 transition duration-300">
           <div className="absolute -left-4 z-0">
             <img src="/cancelled.png" alt="" className="h-12 " />
           </div>
@@ -63,7 +63,7 @@ export default function MainContent() {
             </h2>
           </div>
         </div>
-        <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[15%] relative py-3 shadow-custom-xl">
+        <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[15%] relative py-3 shadow-custom-xl hover:transform hover:scale-95 transition duration-300">
           <div className="absolute -left-4 z-0">
             <img src="/avatar.png" alt="" className="h-10 " />
           </div>
@@ -74,7 +74,7 @@ export default function MainContent() {
             </h2>
           </div>
         </div>
-        <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[15%] relative py-3 shadow-custom-xl">
+        <div className="flex items-center bg-[#f7f7f7] rounded-xl w-[15%] relative py-3 shadow-custom-xl hover:transform hover:scale-95 transition duration-300">
           <div className="absolute -left-4 z-0">
             <img src="/avatar.png" alt="" className="h-10 " />
           </div>
