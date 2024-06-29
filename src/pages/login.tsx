@@ -1,11 +1,16 @@
 import { useRouter } from "next/router";
+import { useState } from "react";
 import { FaEye, FaEyeSlash, FaEnvelope } from "react-icons/fa";
 import { FaUnlockKeyhole } from "react-icons/fa6";
 
 export default function Login() {
-  const isOpen = true;
+  const [isOpen, setIsOpen] = useState(true);
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
   const router = useRouter();
-  const handleSubmit = () => {
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+
     router.push("/dashboard");
   };
   return (
@@ -33,6 +38,8 @@ export default function Login() {
           <FaEnvelope className="h-8 ml-2 mr-1 text-gray-300" />
           <input
             type="text"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
             placeholder="Enter your email or username"
             className="pl-3 outline-none text-sm"
           />
@@ -41,6 +48,8 @@ export default function Login() {
           <FaUnlockKeyhole className="h-6 ml-2 mr-1 text-gray-300" />
           <input
             type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             placeholder="Enter your password"
             className="pl-3 outline-none text-sm"
           />

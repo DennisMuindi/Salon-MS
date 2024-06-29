@@ -86,27 +86,7 @@ export default function SideBar() {
               </Link>
             </li>
           </div>
-          <div
-            className={`flex items-center gap-6   pl-2 ${
-              isActive("/payment") ? " text-[#673BB7]" : ""
-            }`}
-          >
-            <FaMoneyBill1Wave
-              className={`h-8 ${
-                isActive("/payment") ? "text-[#673BB7]" : "text-gray-600"
-              }`}
-            />
-            <li>
-              <Link
-                href="/payment"
-                className={`text-xs font-medium ${
-                  isActive("/payment") ? "text-[#673BB7]" : "text-gray-600"
-                } hover:text-[#673BB7]`}
-              >
-                Payments
-              </Link>
-            </li>
-          </div>
+
           <div
             className={`flex items-center gap-6 pl-2 ${
               isActive("/schedule") ? "text-[#673BB7]" : "text-gray-600"
@@ -129,23 +109,23 @@ export default function SideBar() {
             </li>
           </div>
           <div
-            className={`flex items-center gap-6 pl-2 ${
-              isActive("/reservations") ? "text-[#673BB7]" : "text-gray-600"
+            className={`flex items-center gap-6   pl-2 ${
+              isActive("/payment") ? " text-[#673BB7]" : ""
             }`}
           >
-            <FaCalendarDays
+            <FaMoneyBill1Wave
               className={`h-8 ${
-                isActive("/reservations") ? "text-[#673BB7]" : "text-gray-600"
+                isActive("/payment") ? "text-[#673BB7]" : "text-gray-600"
               }`}
             />
             <li>
               <Link
-                href="/reservations"
+                href="/payment"
                 className={`text-xs font-medium ${
-                  isActive("/reservations") ? "text-[#673BB7]" : "text-gray-600"
+                  isActive("/payment") ? "text-[#673BB7]" : "text-gray-600"
                 } hover:text-[#673BB7]`}
               >
-                Reservations
+                Payments
               </Link>
             </li>
           </div>
